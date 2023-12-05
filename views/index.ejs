@@ -1,0 +1,26 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Places Autocomplete</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=<%= apiKey %>&libraries=places&callback=initAutoComplete"
+      defer
+    ></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <input
+        id="autocomplete"
+        name="place"
+        placeholder="Enter any place"
+        type="text"
+      />
+      <button type="submit">SUBMIT</button>
+    </form>
+    <p id="message">Enter location</p>
+  </body>
+</html>
